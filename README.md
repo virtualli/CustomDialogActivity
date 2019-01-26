@@ -1,0 +1,2 @@
+# CustomDialogActivity
+自定义的一个树形dialogActivity，使用MVVM+LiveData+BindingData，目的为同一应用多次使用相同的dialog来筛选不同的数据。
