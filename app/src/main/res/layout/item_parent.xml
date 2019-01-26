@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="parent"
+            type="com.example.activitydialog.vo.Parent"/>
+        <variable
+            name="viewModel"
+            type="com.example.activitydialog.vm.DialogViewModel"/>
+    </data>
+
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:onClick="@{() -> viewModel.checkParent(parent)}"
+    android:background="@{parent.isCheck ? @drawable/parent_checked : @drawable/parent_uncheck}">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@{parent.name}"/>
+
+</LinearLayout>
+</layout>
